@@ -1,27 +1,21 @@
 {
-    "type": "postgres",
-    "host": "localhost",
-    "port": 5432,
-    "username": "postgres",
-    "password": "12345",
-    "database": "rentx",
-    "synchronize": true,
-    "logging": false,
-    "cache": {
-       "duration": 20000
-    },
-    "entities": [
-       "src/models/**/*.ts"
-    ],
-    "migrations": [
-       "./src/database/migrations/**/*.ts"
-    ],
-    "subscribers": [
-       "src/subscriber/**/*.ts"
-    ],
-    "cli": {
-       "entitiesDir": "src/entity",
-       "migrationsDir": "./src/database/migrations",
-       "subscribersDir": "src/subscriber"
-    }
+   "type": "postgres",
+   "host": "localhost",
+   "port": 5432,
+   "username": "postgres",
+   "password": "12345",
+   "database": "rentx",
+   "logging": false,
+   "cache": {
+      "duration": 20000
+   },
+   "entities": [
+      "./src/modules/**/entities/*.ts"
+   ],
+   "migrations": [
+      "./src/database/migrations/**/*.ts"
+   ],
+   "cli": {
+     "migrationsDir": "./src/database/migrations"
+   }
  }
