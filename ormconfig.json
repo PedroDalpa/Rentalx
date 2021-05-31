@@ -10,12 +10,12 @@
       "duration": 20000
    },
    "entities": [
-      "./src/modules/**/entities/*.ts"
+      "./src/modules/**/infra/entities/*.ts"
    ],
    "migrations": [
-      "./src/database/migrations/**/*.ts"
+      "./src/shared/infra/typeorm/migrations/**/*.ts"
    ],
    "cli": {
-     "migrationsDir": "./src/database/migrations"
+     "migrationsDir": "./src/shared/infra/typeorm/migrations"
    }
  }
