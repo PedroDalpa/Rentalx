@@ -1,7 +1,7 @@
 import { v4 as uuid } from 'uuid';
 
 import { ICreateUserDTO } from '../../dtos/ICreateUserDTO';
-import { User } from '../../entities/User';
+import { User } from '../../infra/typeorm/entities/User';
 import { IUserRepository } from '../IUsersRepository';
 
 class UserRepositoryInMemory implements IUserRepository {
