@@ -27,7 +27,6 @@ class CarsRepositoryInMemory implements ICarsRepository {
     });
 
     this.cars.push(car);
-    console.log(car);
 
     return car;
   }
