@@ -1,7 +1,8 @@
 import { inject, injectable } from 'tsyringe';
-import { deleteFile } from 'utils/file';
 
 import { CarsImagensRepository } from '@modules/cars/infra/typeorm/repositories/CarsImagensRepository';
+
+import { deleteFile } from '../../../../utils/file';
 
 interface IRequest {
   car_id: string;
