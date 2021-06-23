@@ -1,0 +1,565 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2021-06-12T18:21:51.700Z",
+  "__export_source": "insomnia.desktop.app:v2021.3.0",
+  "resources": [
+    {
+      "_id": "req_18eb591ebe45407f98fe687aae65d300",
+      "parentId": "fld_0c8b60a7ac1a443fb5bf8e2f7a7b0dd5",
+      "modified": 1622649803781,
+      "created": 1622649353356,
+      "url": "{{ _.baseURL }}/rentals",
+      "name": "Create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"expected_return_date\": \"2021-06-12T16:00:23.154Z\",\n\t\"car_id\": \"ea3220d9-5743-4b3e-b6d5-906b4223ece6\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_ce043a04edf44469ae9e459c3fc18395"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.tokenUser }}"
+      },
+      "metaSortKey": -1622649353356,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_0c8b60a7ac1a443fb5bf8e2f7a7b0dd5",
+      "parentId": "wrk_89a82e6cf9ab48ddbb0870fb33431b1a",
+      "modified": 1622649342701,
+      "created": 1622649342701,
+      "name": "Rentals",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1622649342701,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_89a82e6cf9ab48ddbb0870fb33431b1a",
+      "parentId": null,
+      "modified": 1621099644104,
+      "created": 1621099644104,
+      "name": "Rentalx",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_aa2c68e142534984a869e0aad384a470",
+      "parentId": "fld_f63a017d8e3644ca8bb6bede72b5d37e",
+      "modified": 1622584850412,
+      "created": 1622584387027,
+      "url": "{{ _.baseURL }}/cars/imagens/89162dbc-62a7-4038-8d8b-45f9cd1acee6",
+      "name": "Save Imagens",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "multipart/form-data",
+        "params": [
+          {
+            "name": "imagens",
+            "value": "",
+            "description": "",
+            "id": "pair_a721886967104b2599a1ea2e61e28e61",
+            "type": "file",
+            "fileName": "/home/pedro/Downloads/2020-audi-a3-exterior-10.jpg"
+          },
+          {
+            "name": "imagens",
+            "value": "",
+            "description": "",
+            "id": "pair_dba11f4683e749b1bedcf35dc5d4b15c",
+            "type": "file",
+            "fileName": "/home/pedro/Downloads/cars.jpeg"
+          }
+        ]
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "multipart/form-data",
+          "id": "pair_af820217a7874b3887d05bc46b211333"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.tokenAdmin }}"
+      },
+      "metaSortKey": -1622584387027,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_f63a017d8e3644ca8bb6bede72b5d37e",
+      "parentId": "wrk_89a82e6cf9ab48ddbb0870fb33431b1a",
+      "modified": 1622495030511,
+      "created": 1622495030511,
+      "name": "Cars",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1622495030512,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_0db1e413c6d94cbaae815a0b4caa2dd5",
+      "parentId": "fld_f63a017d8e3644ca8bb6bede72b5d37e",
+      "modified": 1622581682863,
+      "created": 1622581556298,
+      "url": "{{ _.baseURL }}/cars/specifications/ea3220d9-5743-4b3e-b6d5-906b4223ece6",
+      "name": "Create Specifications",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"specifications_id\": [\n\t\t\"b69f501a-dc13-4ffa-92e9-ee94c4fa727c\"\n\t]\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_5b9faab4f5c9457ab7b9aee4d194f74a"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.tokenAdmin }}"
+      },
+      "metaSortKey": -1622581556298,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_5f068a928afe47b49c8894641e29d44e",
+      "parentId": "fld_f63a017d8e3644ca8bb6bede72b5d37e",
+      "modified": 1622572176606,
+      "created": 1622571731188,
+      "url": "{{ _.baseURL }}/cars/available",
+      "name": "List Available",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [
+        {
+          "name": "name",
+          "value": "Audi A8",
+          "description": "",
+          "id": "pair_dca2732e915948369c3ff0ec2b1a8b3d",
+          "disabled": true
+        },
+        {
+          "name": "brand",
+          "value": "Marca",
+          "description": "",
+          "id": "pair_c46c09625fa846889857e1e2a574f2f2",
+          "disabled": true
+        },
+        {
+          "name": "category_id",
+          "value": "d5594e82-abff-4144-a8e1-f6ec2ffc465d",
+          "description": "",
+          "id": "pair_9e534c6e60ac4acc8d6da4b5e797fc04",
+          "disabled": true
+        }
+      ],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1622571731188,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_3fafbd8e75a94c3e9d45eb2aa48a2040",
+      "parentId": "fld_f63a017d8e3644ca8bb6bede72b5d37e",
+      "modified": 1622553975998,
+      "created": 1622495038203,
+      "url": "{{ _.baseURL }}/cars",
+      "name": "Create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"brand\": \"Audi\",\n\t\"category_id\": \"d5594e82-abff-4144-a8e1-f6ec2ffc465d\",\n\t\"daily_rate\": 180.00,\n\t\"description\": \"Carro de luxo\",\n\t\"fine_amount\": 130,\n\t\"license_plate\": \"TBC-1234\",\n\t\"name\": \"Audi A8\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_fe9d8a8185e74d3ab9282f77ca227f7a"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.tokenAdmin }}"
+      },
+      "metaSortKey": -1622495038203,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_6d683540259b4582bd781ae4c48cf3ad",
+      "parentId": "fld_0c046f3485d149b09469c030c334693e",
+      "modified": 1621874341290,
+      "created": 1621874239470,
+      "url": "{{ _.baseURL }}/users/avatar",
+      "name": "Avatar",
+      "description": "",
+      "method": "PATCH",
+      "body": {
+        "mimeType": "multipart/form-data",
+        "params": [
+          {
+            "name": "avatar",
+            "value": "",
+            "description": "",
+            "id": "pair_c04317e345de45f0927a9ce4d5098767",
+            "type": "file",
+            "fileName": "/home/pedro/Imagens/ROCKE.png"
+          }
+        ]
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "multipart/form-data",
+          "id": "pair_fa3c69755f9b456fbe7bac5c5e3d5498"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}"
+      },
+      "metaSortKey": -1621874239470,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_0c046f3485d149b09469c030c334693e",
+      "parentId": "wrk_89a82e6cf9ab48ddbb0870fb33431b1a",
+      "modified": 1621792675345,
+      "created": 1621792675345,
+      "name": "User",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1621792675345,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_f809f412f9574187b46ca3905430fa57",
+      "parentId": "fld_0c046f3485d149b09469c030c334693e",
+      "modified": 1622653182039,
+      "created": 1621796747094,
+      "url": "{{ _.baseURL }}/sessions",
+      "name": "Authenticate",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"email\":\"pedro@gmail.com\",\n\t\"password\":\"12345\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_1a5ea80ac055437fa1dff99fba335b7d"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1621796747094,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_d2d230ca556e42fab8b1ba78175b5044",
+      "parentId": "fld_0c046f3485d149b09469c030c334693e",
+      "modified": 1621796801073,
+      "created": 1621792687698,
+      "url": "{{ _.baseURL }}/users",
+      "name": "Create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"pedro\",\n\t\"email\": \"pedro@gmail.com\",\n\t\"password\": \"12345\",\n\t\"driver_license\": \"1234\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_580e0f33f9a644be836aa1d0c195b971"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1621792687698,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_ea5c7eeaf79842199ef821c8a47af6ca",
+      "parentId": "fld_00039567cea043d8a62efff00cdd9578",
+      "modified": 1621798939042,
+      "created": 1621113558774,
+      "url": "{{ _.baseURL }}/specifications",
+      "name": "Create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"cambio automatico\",\n\t\"description\": \"carro automatico\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_0bd1aaf87b00432fb640e356e9a8f89c"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.token }}",
+        "disabled": true
+      },
+      "metaSortKey": -1621113558775,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_00039567cea043d8a62efff00cdd9578",
+      "parentId": "wrk_89a82e6cf9ab48ddbb0870fb33431b1a",
+      "modified": 1621113549408,
+      "created": 1621113549408,
+      "name": "Specifications",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1621113549409,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_22deac15ed304801a93ccff01b257e81",
+      "parentId": "fld_a205970658164be5b8da5bdb3f462ca8",
+      "modified": 1621292360385,
+      "created": 1621292178394,
+      "url": "{{ _.baseURL }}/categories/import",
+      "name": "import",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "multipart/form-data",
+        "params": [
+          {
+            "name": "file",
+            "value": "",
+            "description": "",
+            "id": "pair_5c6d87ae18c84011931e7597cec14214",
+            "type": "file",
+            "fileName": "/home/pedro/Downloads/arquivo.csv"
+          }
+        ]
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "multipart/form-data",
+          "id": "pair_7c34404102a34475aa6f965cfd44dd41"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1621292178394,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_a205970658164be5b8da5bdb3f462ca8",
+      "parentId": "wrk_89a82e6cf9ab48ddbb0870fb33431b1a",
+      "modified": 1621099649846,
+      "created": 1621099649846,
+      "name": "Categories",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1621099649846,
+      "_type": "request_group"
+    },
+    {
+      "_id": "req_1793d838da5d4ab1aaa37fef2fd03800",
+      "parentId": "fld_a205970658164be5b8da5bdb3f462ca8",
+      "modified": 1623072645645,
+      "created": 1621099658296,
+      "url": "{{ _.baseURL }}/categories",
+      "name": "Create",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"SUV\",\n\t\"description\": \"Categoria de carro SUV\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_c1b65467dfd1432e897b0f776a451c5f"
+        }
+      ],
+      "authentication": {
+        "type": "bearer",
+        "token": "{{ _.tokenAdmin }}"
+      },
+      "metaSortKey": -1621099658297,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_a03ff05f762f4752898e4dd9572a952e",
+      "parentId": "fld_a205970658164be5b8da5bdb3f462ca8",
+      "modified": 1621103258487,
+      "created": 1621103247133,
+      "url": "{{ _.baseURL }}/categories",
+      "name": "Get",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1620720779973,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_2e95d62972238888e6c9ac2527d72bf0444f8bf7",
+      "parentId": "wrk_89a82e6cf9ab48ddbb0870fb33431b1a",
+      "modified": 1622653194755,
+      "created": 1621099644497,
+      "name": "Base Environment",
+      "data": {
+        "baseURL": "http://localhost:3333",
+        "tokenAdmin": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MjI2NTMxNzksImV4cCI6MTYyMjczOTU3OSwic3ViIjoiNWI1MDRjODktNWMxYi00ZTczLWJmYTUtZWVhZDI4NzJlYzY4In0.iLQq91ZUoL-Aias0iILNls9Ntop6NOUyFT2N48panHw",
+        "tokenUser": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MjI2NDk0NTksImV4cCI6MTYyMjczNTg1OSwic3ViIjoiMTY2NzZkMjQtODU1Zi00MzRhLThlYjgtZGNkMjcyYWRkMGU4In0.jrSRyul4HDB6WzDfmpmhgzxtqz-O4lJBOw4yyKYlaks"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "baseURL",
+          "tokenAdmin",
+          "tokenUser"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1621099644497,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_2e95d62972238888e6c9ac2527d72bf0444f8bf7",
+      "parentId": "wrk_89a82e6cf9ab48ddbb0870fb33431b1a",
+      "modified": 1621099644504,
+      "created": 1621099644504,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_fa9dce12ab2240628f2ab72331bfcc9f",
+      "parentId": "wrk_89a82e6cf9ab48ddbb0870fb33431b1a",
+      "modified": 1621099644111,
+      "created": 1621099644111,
+      "fileName": "Rentalx",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    }
+  ]
+}
