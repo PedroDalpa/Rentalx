@@ -3,8 +3,6 @@ import { inject, injectable } from 'tsyringe';
 import { CarsImagensRepository } from '@modules/cars/infra/typeorm/repositories/CarsImagensRepository';
 import { IStorageProvider } from '@shared/container/providers/StorageProvider/IStorageProvider';
 
-import { deleteFile } from '../../../../utils/file';
-
 interface IRequest {
   car_id: string;
   imagens_name: string[];
